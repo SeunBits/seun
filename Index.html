@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Data Analyst Portfolio</title>
+    <style>
+        /* --- CSS Styles --- */
+        :root {
+            --primary-color: #3498db; /* A clean blue, like a chart highlight */
+            --secondary-color: #2c3e50; /* Dark, professional text/background contrast */
+            --background-light: #f4f7f6; /* Light background for sections */
+            --text-dark: #333;
+            --font-stack: 'Arial', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: white;
+        }
+
+        /* Header/Navigation */
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        #hero {
+            background-color: var(--background-light);
+            padding: 4em 0;
+            text-align: center;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        #hero h1 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5em;
+        }
+
+        #hero p {
+            font-size: 1.2em;
+            max-width: 700px;
+            margin: 1em auto;
+        }
+
+        /* Skills/Projects Section */
+        section {
+            padding: 3em 0;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2em;
+            color: var(--primary-color);
+            margin-bottom: 1em;
+        }
+
+        /* Skills Layout */
+        #skills .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 2em;
+        }
+
+        .skill-item {
+            background: var(--background-light);
+            border: 1px solid #ddd;
+            padding: 15px 25px;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Projects Grid */
+        #projects {
+            background-color: var(--background-light);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 2em;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: left;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .project-card h3 {
+            color: var(--secondary-color);
+            padding: 15px 20px 0;
+            margin-top: 0;
+        }
+
+        .project-card p {
+            padding: 0 20px 15px;
+            font-size: 0.95em;
+        }
+
+        .project-card .tags {
+            padding: 5px 20px 10px;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #ecf0f1;
+            color: #7f8c8d;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .project-link {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .project-link:hover {
+            background-color: #2980b9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* --- Responsiveness (Key for modern design) --- */
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+            .skill-item {
+                width: 100%; /* Full width on small screens */
+            }
+            .project-grid {
+                grid-template-columns: 1fr; /* Single column on small screens */
+            }
+        }
+        /* --- End CSS Styles --- */
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h1>Hi, I'm **[Your Name]** 👋</h1>
+            <p>
+                A data analyst specializing in **Data-Driven Storytelling**, **SQL/ETL**, and **Statistical Modeling**. I transform complex data into clear, actionable insights to drive business strategy.
+            </p>
+            <a href="#projects" class="project-link" style="width: 200px; margin: 20px auto; border-radius: 5px;">View My Projects</a>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>🛠️ Core Data Analysis Skills</h2>
+            <div class="skill-list">
+                <div class="skill-item">Data Cleaning & Pandas</div>
+                <div class="skill-item">SQL & Data Warehousing</div>
+                <div class="skill-item">Statistical Modeling (Regression/A/B)</div>
+                <div class="skill-item">Python/R Scripting</div>
+                <div class="skill-item">Data Visualization (Tableau/Power BI)</div>
+                <div class="skill-item">ETL & Data Pipelines</div>
+                <div class="skill-item">APIs & Data Integration</div>
+                <div class="skill-item">Version Control (Git)</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>📈 Data Portfolio Projects</h2>
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <h3>Project 1: Sales Forecasting & Inventory Optimization</h3>
+                    <p>
+                        Applied **Time Series Analysis (ARIMA)** in **Python** to forecast monthly sales for a retail chain. Improved inventory accuracy by 15% by reducing overstocking.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Time Series</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Jupyter</span>
+                    </div>
+                    <a href="[LINK TO GITHUB/DASHBOARD]" target="_blank" class="project-link">View Analysis & Code</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project 2: Customer Churn Analysis & ETL Pipeline</h3>
+                    <p>
+                        Developed an **ETL pipeline** using **SQL** and **Python** to consolidate customer data from a relational DB and a JSON API. Modeled churn probability using **Logistic Regression**.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">SQL</span>
+                        <span class="tag">ETL</span>
+                        <span class="tag">APIs</span>
+                        <span class="tag">Regression</span>
+                    </div>
+                    <a href="[LINK TO GITHUB/DASHBOARD]" target="_blank" class="project-link">View Analysis & Code</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project 3: A/B Testing Visualization Dashboard</h3>
+                    <p>
+                        Designed an **interactive Tableau dashboard** to visualize results of an A/B test on website button placement. Validated statistical significance and presented findings to stakeholders.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Tableau</span>
+                        <span class="tag">A/B Testing</span>
+                        <span class="tag">Data Storytelling</span>
+                        <span class="tag">Statistical Testing</span>
+                    </div>
+                    <a href="[LINK TO GITHUB/DASHBOARD]" target="_blank" class="project-link">View Live Dashboard</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>📬 Get in Touch</h2>
+            <p>I'm always open to discussing new data challenges and opportunities.</p>
+            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 [Your Name]. All Rights Reserved.</p>
+            <a href="[LINK TO LINKEDIN]" target="_blank">LinkedIn</a> |
+            <a href="[LINK TO GITHUB]" target="_blank">GitHub</a> |
+            <a href="[LINK TO RESUME]" target="_blank">Resume (PDF)</a>
+        </div>
+    </footer>
+
+</body>
+</html>
