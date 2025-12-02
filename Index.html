@@ -7,11 +7,16 @@
     <style>
         /* --- CSS Styles --- */
         :root {
-            --primary-color: #3498db; /* A clean blue, like a chart highlight */
-            --secondary-color: #2c3e50; /* Dark, professional text/background contrast */
-            --background-light: #f4f7f6; /* Light background for sections */
+            --primary-color: #3498db; 
+            --secondary-color: #2c3e50;
+            --background-light: #f4f7f6;
             --text-dark: #333;
             --font-stack: 'Arial', sans-serif;
+        }
+
+        /* RECOMMENDED FIX: Add box-sizing for easier layout management */
+        * {
+            box-sizing: border-box;
         }
 
         body {
@@ -81,7 +86,8 @@
 
         /* Skills/Projects Section */
         section {
-            padding: 3em 0;
+            /* Fix: Added padding-top to prevent margin collapse with h2 above */
+            padding: 3em 0; 
             text-align: center;
         }
 
@@ -209,10 +215,10 @@
                 margin: 10px 0;
             }
             .skill-item {
-                width: 100%; /* Full width on small screens */
+                width: 100%; 
             }
             .project-grid {
-                grid-template-columns: 1fr; /* Single column on small screens */
+                grid-template-columns: 1fr; 
             }
         }
         /* --- End CSS Styles --- */
